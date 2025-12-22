@@ -8,7 +8,7 @@
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "workbench.tree.renderIndentGuides": "none",
     "workbench.tree.indent": 8,
     // Editor settings
@@ -95,4 +95,6 @@
     },
     // Extentions
     "svelte.enable-ts-plugin": true,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
 }

@@ -1,69 +1,98 @@
-import type { Metadata } from "next";
-import { Readex_Pro, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import NextTopLoader from 'nextjs-rtl-loader';
-
-const readexPro = Readex_Pro({
-  subsets: ["arabic", "latin"],
-  variable: "--font-arabic",
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "QAcart - منصة تعليمية للبرمجة واختبار البرمجيات والذكاء الاصطناعي",
-  description: "تعلم البرمجة، اختبار البرمجيات، والذكاء الاصطناعي من الصفر مع خبراء المجال في منصة QAcart التعليمية",
-  keywords: ["البرمجة", "اختبار البرمجيات", "الذكاء الاصطناعي", "تعلم", "QA", "Testing", "AI", "Development"],
-  authors: [{ name: "QAcart Team" }],
-  robots: "index, follow",
-  icons: {
-    icon: '/qacart-logo.svg',
-    shortcut: '/qacart-logo.svg',
-    apple: '/qacart-logo.svg',
-  },
-  openGraph: {
-    title: "QAcart - منصة تعليمية للبرمجة واختبار البرمجيات والذكاء الاصطناعي",
-    description: "تعلم البرمجة، اختبار البرمجيات، والذكاء الاصطناعي من الصفر مع خبراء المجال",
-    type: "website",
-    locale: "ar_SA",
-    alternateLocale: "en_US",
-  },
-};
-
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="ar"
-      dir="rtl"
-      className={`${readexPro.variable} ${geistMono.variable}`}
-      data-scroll-behavior="smooth"
-    >
-      <body className={`${readexPro.className} antialiased`}>
-        <NextTopLoader
-          color="#88C0D0"
-          height={3}
-          boxShadow="0 0 10px #88C0D0, 0 0 5px #88C0D0"
-          showSpinner={false}
-        />
-        <div className="min-h-screen flex flex-col">
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-      </body>
-    </html>
-  );
+{
+    // Workbenck settings
+    "workbench.colorTheme": "Nord",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "single",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 8,
+    // Editor settings
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.lineHeight": 1.7,
+    "editor.stickyScroll.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.codeLens": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.quickSuggestions": {
+        "other": "off",
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.renderLineHighlight": "none",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.tabCompletion": "on",
+    "editor.links": false,
+    "editor.lightbulb.enabled": "off",
+    "editor.hover.enabled": "off",
+    "editor.guides.indentation": false,
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    // Explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // Terminal settings
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+    // Other settings
+    "debug.console.fontSize": 14,
+    "git.decorations.enabled": false,
+    "files.autoSave": "afterDelay",
+    "breadcrumbs.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "update.mode": "none",
+    "search.decorations.badges": false,
+    "window.titleBarStyle": "native",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    // Custome UI settings
+    "custom-ui-style.electron": {
+        "titleBarStyle": "hidden",
+    },
+    "custom-ui-style.font.sansSerif": "FiraCode Nerd Font Mono",
+    "custom-ui-style.stylesheet": {
+        ".notification-toast": "box-shadow: none !important",
+        ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+        ".quick-input-widget": "top: 25vh !important",
+        ".quick-input-list .scrollbar": "display: none",
+        ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+        ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+        ".quick-input-titlebar": "background: #100B15 !important",
+        ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+        ".monaco-scrollable-element > .shadow.top": "display: none",
+        ".sidebar .title-label": "padding: 0 !important",
+        ".sidebar": "border: none !important",
+        ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+        ".monaco-list-row.focused": "outline: none !important",
+        ".monaco-editor .scroll-decoration": "display: none",
+        ".title-actions": "display: none !important",
+        ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+        ".title .monaco-icon-label:after": "margin-right: 0",
+        ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+        ".title .monaco-icon-label.file-icon": "margin: 0 60px",
+        ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)",
+        "custom-ui-style.background.url": "/Users/qacart/Documents/images/wallpaperflare.com_wallpaper \\(6\\).jpg",
+    },
+    // Extentions
+    "svelte.enable-ts-plugin": true,
 }

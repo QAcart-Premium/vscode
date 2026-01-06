@@ -2,13 +2,12 @@
     // Workbenck settings
     "workbench.colorTheme": "Nord",
     "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": true,
     "workbench.editor.showTabs": "single",
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "workbench.sideBar.location": "left",
+    "workbench.sideBar.location": "right",
     "workbench.tree.renderIndentGuides": "none",
     "workbench.tree.indent": 8,
     // Editor settings
@@ -24,17 +23,13 @@
     "editor.scrollbar.horizontal": "hidden",
     "editor.codeLens": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.quickSuggestions": {
-        "other": "off",
-    },
-    "editor.suggestOnTriggerCharacters": false,
     "editor.renderLineHighlight": "none",
     "editor.overviewRulerBorder": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.tabCompletion": "on",
     "editor.links": false,
     "editor.lightbulb.enabled": "off",
-    "editor.hover.enabled": "off",
+    "editor.hover.enabled": "on",
     "editor.guides.indentation": false,
     "editor.tabSize": 2,
     "editor.tokenColorCustomizations": {
@@ -91,10 +86,14 @@
         ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
         ".title .monaco-icon-label.file-icon": "margin: 0 60px",
         ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)",
-        "custom-ui-style.background.url": "/Users/qacart/Documents/images/wallpaperflare.com_wallpaper \\(6\\).jpg",
+        ".markdown-body": "direction: rtl"
     },
     // Extentions
     "svelte.enable-ts-plugin": true,
-    "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
+    "git.confirmSync": false,
+    "window.commandCenter": false,
+    "chat.commandCenter.enabled": false,
+    "workbench.colorCustomizations": {},
+    "workbench.navigationControl.enabled": false,
 }
